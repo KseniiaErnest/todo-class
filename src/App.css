@@ -1,38 +1,151 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap');
+
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 100%;
+}
+
+body {
+  height: 100%;
+  font-family: 'Josefin Sans';
+  color: hsl(0, 0%, 98%);
+}
+
 .App {
-  text-align: center;
+  background: url("./images/bg-desktop-dark.jpg") top/100% 30% no-repeat hsl(235, 21%, 11%);;
+  height: 100vh;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+main {
+  width: 45%;
+  margin: 0 auto;
+  /* background-color: aqua; */
+  padding-top: 3.5rem;
   display: flex;
   flex-direction: column;
+  align-items: start;
+}
+
+h1 {
+  letter-spacing: 0.2rem;
+  margin-bottom: 2rem;
+}
+
+form {
+  width: 100%;
+}
+
+.to-do {
+  width: 100%;
+  font-family: 'Josefin Sans';
+  background-color: hsl(235, 24%, 19%);
+  padding: 1rem 0 1rem 2.5rem;
+  font-size: 1.5rem;
+  border-radius: 3px;
+  color: hsl(236, 33%, 92%);
+  border: none;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+ 
+}
+
+.item {
+  list-style-type: none;
+  border-bottom: 0.5px solid hsl(237, 14%, 26%);
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem ;
+}
+
+.item span {
+  display: flex;
   align-items: center;
+  gap: 1.5rem;
+}
+
+.list-container {
+  width: 100%;
+  margin-top: 1.2rem;
+}
+
+input[type="checkbox"] {
+  width: 1.5rem;                        
+  height: 1.5rem;                        
+  clip-path: circle(46% at 50% 50%);   /* Set the clip path of circle*/
+}
+
+.btn-delete {
+  background-color: hsl(235, 24%, 19%);
+  color: hsl(234, 11%, 52%);
+  border: none;
+  font-size: 1.3rem;
+  cursor: pointer;
+}
+
+.btn-container {
+  display: flex;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  gap: 2rem;
 }
 
-.App-link {
-  color: #61dafb;
+.btn-deleteAll {
+  margin-left: 5rem;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.btn {
+  background-color: hsl(235, 24%, 19%);
+border: none;
+color: hsl(234, 11%, 52%);
+  font-family: 'Josefin Sans';
+  font-size: 1.3rem;
+  transition: all 0.3ms;
+
+}
+
+.btn:hover {
+  color: hsl(0, 0%, 98%);
+}
+
+
+
+.active {
+  color: hsl(220, 98%, 61%);
+}
+
+.completed {
+  text-decoration: line-through;
+  color: hsl(233, 14%, 35%);
+}
+
+.btnActive {
+  color: hsl(220, 98%, 61%);
+}
+
+
+@media only screen and (max-width: 90rem) {
+
+
+  main {
+    width: 34rem;
+    
   }
-  to {
-    transform: rotate(360deg);
+  
+}
+
+@media only screen and (max-width: 38rem) {
+
+  html {
+    font-size: 80%;
   }
+
+  main {
+    width: 90%;
+    
+  }
+  
 }
