@@ -1,5 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap');
-
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap");
 
 * {
   padding: 0;
@@ -13,19 +12,24 @@ html {
 
 body {
   height: 100%;
-  font-family: 'Josefin Sans';
+  font-family: "Josefin Sans";
   color: hsl(0, 0%, 98%);
 }
 
 .App {
-  background: url("./images/bg-desktop-dark.jpg") top/100% 30% no-repeat hsl(235, 21%, 11%);;
+  background: url("./images/bg-desktop-dark.jpg") top/100% 30% no-repeat
+    hsl(235, 21%, 11%);
   height: 100vh;
+}
+
+body.light-mode .App {
+  background: url("./images/bg-desktop-light.jpg") top/100% 30% no-repeat
+    hsl(0, 0%, 98%);
 }
 
 main {
   width: 45%;
   margin: 0 auto;
-  /* background-color: aqua; */
   padding-top: 3.5rem;
   display: flex;
   flex-direction: column;
@@ -33,8 +37,11 @@ main {
 }
 
 h1 {
+  width: 100%;
   letter-spacing: 0.2rem;
   margin-bottom: 2rem;
+  display: flex;
+  justify-content: space-between;
 }
 
 form {
@@ -43,7 +50,7 @@ form {
 
 .to-do {
   width: 100%;
-  font-family: 'Josefin Sans';
+  font-family: "Josefin Sans";
   background-color: hsl(235, 24%, 19%);
   padding: 1rem 0 1rem 2.5rem;
   font-size: 1.5rem;
@@ -51,7 +58,11 @@ form {
   color: hsl(236, 33%, 92%);
   border: none;
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
- 
+}
+
+body.light-mode .to-do {
+  background-color: hsl(0, 0%, 98%);
+  color: hsl(235, 21%, 11%);
 }
 
 .item {
@@ -59,7 +70,10 @@ form {
   border-bottom: 0.5px solid hsl(237, 14%, 26%);
   display: flex;
   justify-content: space-between;
-  padding: 1rem ;
+  padding: 1rem;
+}
+body.light-mode .item {
+  border-color: hsl(234, 39%, 85%);
 }
 
 .item span {
@@ -74,9 +88,9 @@ form {
 }
 
 input[type="checkbox"] {
-  width: 1.5rem;                        
-  height: 1.5rem;                        
-  clip-path: circle(46% at 50% 50%);   /* Set the clip path of circle*/
+  width: 1.5rem;
+  height: 1.5rem;
+  clip-path: circle(46% at 50% 50%); /* Set the clip path of circle*/
 }
 
 .btn-delete {
@@ -99,19 +113,26 @@ input[type="checkbox"] {
 
 .btn {
   background-color: hsl(235, 24%, 19%);
-border: none;
-color: hsl(234, 11%, 52%);
-  font-family: 'Josefin Sans';
+  border: none;
+  color: hsl(234, 11%, 52%);
+  font-family: "Josefin Sans";
   font-size: 1.3rem;
   transition: all 0.3ms;
+  cursor: pointer;
+}
 
+body.light-mode .btn,
+body.light-mode .btn-delete {
+  background-color: hsl(0, 0%, 98%);
 }
 
 .btn:hover {
   color: hsl(0, 0%, 98%);
 }
 
-
+body.light-mode .btn:hover {
+  color: hsl(235, 21%, 11%);
+}
 
 .active {
   color: hsl(220, 98%, 61%);
@@ -126,26 +147,18 @@ color: hsl(234, 11%, 52%);
   color: hsl(220, 98%, 61%);
 }
 
-
 @media only screen and (max-width: 90rem) {
-
-
   main {
     width: 34rem;
-    
   }
-  
 }
 
 @media only screen and (max-width: 38rem) {
-
   html {
     font-size: 80%;
   }
 
   main {
     width: 90%;
-    
   }
-  
 }
