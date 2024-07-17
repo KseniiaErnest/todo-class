@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/todo-class/static/css/main.0753a9f1.css",
+    "main.js": "/todo-class/static/js/main.98231611.js",
+    "static/media/bg-desktop-light.jpg": "/todo-class/static/media/bg-desktop-light.3508d620efd5a52bb4ce.jpg",
+    "static/media/bg-desktop-dark.jpg": "/todo-class/static/media/bg-desktop-dark.73e47dbb723ebc772ef0.jpg",
+    "index.html": "/todo-class/index.html",
+    "main.0753a9f1.css.map": "/todo-class/static/css/main.0753a9f1.css.map",
+    "main.98231611.js.map": "/todo-class/static/js/main.98231611.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.0753a9f1.css",
+    "static/js/main.98231611.js"
+  ]
+}
