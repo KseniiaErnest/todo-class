@@ -51,9 +51,6 @@ class App extends Component {
 
   handleFilterTask = () => {
     const { listArr, currentFilter } = this.state;
-    // or below is the same:
-    // const listArr = this.state.listArr;
-    // const currentFilter = this.state.currentFilter;
 
     if (currentFilter === "Active")
       return listArr.filter((task) => task.active);
